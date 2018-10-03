@@ -52,131 +52,6 @@
     <exclude name="**/?*.aj"/>
   </patternset>
   
-  <!-- JDK definitions -->
-  
-  <property name="jdk.bin.10" value="${jdk.home.10}/bin"/>
-  <path id="jdk.classpath.10">
-    <fileset dir="${jdk.home.10}">
-      <include name="../jdk-10.0.2!/java.activation"/>
-      <include name="../jdk-10.0.2!/java.base"/>
-      <include name="../jdk-10.0.2!/java.compiler"/>
-      <include name="../jdk-10.0.2!/java.corba"/>
-      <include name="../jdk-10.0.2!/java.datatransfer"/>
-      <include name="../jdk-10.0.2!/java.desktop"/>
-      <include name="../jdk-10.0.2!/java.instrument"/>
-      <include name="../jdk-10.0.2!/java.jnlp"/>
-      <include name="../jdk-10.0.2!/java.logging"/>
-      <include name="../jdk-10.0.2!/java.management"/>
-      <include name="../jdk-10.0.2!/java.management.rmi"/>
-      <include name="../jdk-10.0.2!/java.naming"/>
-      <include name="../jdk-10.0.2!/java.prefs"/>
-      <include name="../jdk-10.0.2!/java.rmi"/>
-      <include name="../jdk-10.0.2!/java.scripting"/>
-      <include name="../jdk-10.0.2!/java.se"/>
-      <include name="../jdk-10.0.2!/java.se.ee"/>
-      <include name="../jdk-10.0.2!/java.security.jgss"/>
-      <include name="../jdk-10.0.2!/java.security.sasl"/>
-      <include name="../jdk-10.0.2!/java.smartcardio"/>
-      <include name="../jdk-10.0.2!/java.sql"/>
-      <include name="../jdk-10.0.2!/java.sql.rowset"/>
-      <include name="../jdk-10.0.2!/java.transaction"/>
-      <include name="../jdk-10.0.2!/java.xml"/>
-      <include name="../jdk-10.0.2!/java.xml.bind"/>
-      <include name="../jdk-10.0.2!/java.xml.crypto"/>
-      <include name="../jdk-10.0.2!/java.xml.ws"/>
-      <include name="../jdk-10.0.2!/java.xml.ws.annotation"/>
-      <include name="../jdk-10.0.2!/javafx.base"/>
-      <include name="../jdk-10.0.2!/javafx.controls"/>
-      <include name="../jdk-10.0.2!/javafx.deploy"/>
-      <include name="../jdk-10.0.2!/javafx.fxml"/>
-      <include name="../jdk-10.0.2!/javafx.graphics"/>
-      <include name="../jdk-10.0.2!/javafx.media"/>
-      <include name="../jdk-10.0.2!/javafx.swing"/>
-      <include name="../jdk-10.0.2!/javafx.web"/>
-      <include name="../jdk-10.0.2!/jdk.accessibility"/>
-      <include name="../jdk-10.0.2!/jdk.aot"/>
-      <include name="../jdk-10.0.2!/jdk.attach"/>
-      <include name="../jdk-10.0.2!/jdk.charsets"/>
-      <include name="../jdk-10.0.2!/jdk.compiler"/>
-      <include name="../jdk-10.0.2!/jdk.crypto.cryptoki"/>
-      <include name="../jdk-10.0.2!/jdk.crypto.ec"/>
-      <include name="../jdk-10.0.2!/jdk.crypto.mscapi"/>
-      <include name="../jdk-10.0.2!/jdk.deploy"/>
-      <include name="../jdk-10.0.2!/jdk.deploy.controlpanel"/>
-      <include name="../jdk-10.0.2!/jdk.dynalink"/>
-      <include name="../jdk-10.0.2!/jdk.editpad"/>
-      <include name="../jdk-10.0.2!/jdk.hotspot.agent"/>
-      <include name="../jdk-10.0.2!/jdk.httpserver"/>
-      <include name="../jdk-10.0.2!/jdk.incubator.httpclient"/>
-      <include name="../jdk-10.0.2!/jdk.internal.ed"/>
-      <include name="../jdk-10.0.2!/jdk.internal.jvmstat"/>
-      <include name="../jdk-10.0.2!/jdk.internal.le"/>
-      <include name="../jdk-10.0.2!/jdk.internal.opt"/>
-      <include name="../jdk-10.0.2!/jdk.internal.vm.ci"/>
-      <include name="../jdk-10.0.2!/jdk.internal.vm.compiler"/>
-      <include name="../jdk-10.0.2!/jdk.internal.vm.compiler.management"/>
-      <include name="../jdk-10.0.2!/jdk.jartool"/>
-      <include name="../jdk-10.0.2!/jdk.javadoc"/>
-      <include name="../jdk-10.0.2!/jdk.javaws"/>
-      <include name="../jdk-10.0.2!/jdk.jcmd"/>
-      <include name="../jdk-10.0.2!/jdk.jconsole"/>
-      <include name="../jdk-10.0.2!/jdk.jdeps"/>
-      <include name="../jdk-10.0.2!/jdk.jdi"/>
-      <include name="../jdk-10.0.2!/jdk.jdwp.agent"/>
-      <include name="../jdk-10.0.2!/jdk.jfr"/>
-      <include name="../jdk-10.0.2!/jdk.jlink"/>
-      <include name="../jdk-10.0.2!/jdk.jshell"/>
-      <include name="../jdk-10.0.2!/jdk.jsobject"/>
-      <include name="../jdk-10.0.2!/jdk.jstatd"/>
-      <include name="../jdk-10.0.2!/jdk.localedata"/>
-      <include name="../jdk-10.0.2!/jdk.management"/>
-      <include name="../jdk-10.0.2!/jdk.management.agent"/>
-      <include name="../jdk-10.0.2!/jdk.management.cmm"/>
-      <include name="../jdk-10.0.2!/jdk.management.jfr"/>
-      <include name="../jdk-10.0.2!/jdk.management.resource"/>
-      <include name="../jdk-10.0.2!/jdk.naming.dns"/>
-      <include name="../jdk-10.0.2!/jdk.naming.rmi"/>
-      <include name="../jdk-10.0.2!/jdk.net"/>
-      <include name="../jdk-10.0.2!/jdk.pack"/>
-      <include name="../jdk-10.0.2!/jdk.packager"/>
-      <include name="../jdk-10.0.2!/jdk.packager.services"/>
-      <include name="../jdk-10.0.2!/jdk.plugin"/>
-      <include name="../jdk-10.0.2!/jdk.plugin.server"/>
-      <include name="../jdk-10.0.2!/jdk.rmic"/>
-      <include name="../jdk-10.0.2!/jdk.scripting.nashorn"/>
-      <include name="../jdk-10.0.2!/jdk.scripting.nashorn.shell"/>
-      <include name="../jdk-10.0.2!/jdk.sctp"/>
-      <include name="../jdk-10.0.2!/jdk.security.auth"/>
-      <include name="../jdk-10.0.2!/jdk.security.jgss"/>
-      <include name="../jdk-10.0.2!/jdk.snmp"/>
-      <include name="../jdk-10.0.2!/jdk.unsupported"/>
-      <include name="../jdk-10.0.2!/jdk.xml.bind"/>
-      <include name="../jdk-10.0.2!/jdk.xml.dom"/>
-      <include name="../jdk-10.0.2!/jdk.xml.ws"/>
-      <include name="../jdk-10.0.2!/jdk.zipfs"/>
-      <include name="../jdk-10.0.2!/oracle.desktop"/>
-      <include name="../jdk-10.0.2!/oracle.net"/>
-    </fileset>
-  </path>
-  
-  <property name="project.jdk.home" value="${jdk.home.10}"/>
-  <property name="project.jdk.bin" value="${jdk.bin.10}"/>
-  <property name="project.jdk.classpath" value="jdk.classpath.10"/>
-  <!-- Register Custom Compiler Taskdefs -->
-  <property name="javac2.home" value="${idea.home}/lib"/>
-  <path id="javac2.classpath">
-    <fileset dir="${javac2.home}">
-      <include name="javac2.jar"/>
-      <include name="jdom.jar"/>
-      <include name="asm-all*.jar"/>
-      <include name="jgoodies-forms.jar"/>
-    </fileset>
-  </path>
-  <target name="register.custom.compilers">
-    <taskdef name="javac2" classname="com.intellij.ant.Javac2" classpathref="javac2.classpath"/>
-    <taskdef name="instrumentIdeaExtensions" classname="com.intellij.ant.InstrumentIdeaExtensions" classpathref="javac2.classpath"/>
-  </target>
-  
   <!-- Modules -->
   
   
@@ -185,9 +60,6 @@
   <dirname property="module.egdp.basedir" file="${ant.file}"/>
   
   
-  <property name="module.jdk.home.egdp" value="${project.jdk.home}"/>
-  <property name="module.jdk.bin.egdp" value="${project.jdk.bin}"/>
-  <property name="module.jdk.classpath.egdp" value="${project.jdk.classpath}"/>
   
   <property name="compiler.args.egdp" value="-encoding UTF-8 -source 10 -target 10 ${compiler.args}"/>
   
@@ -198,16 +70,13 @@
     <!-- Paths to be included in compilation bootclasspath -->
   </path>
   
-  <path id="egdp.module.production.classpath">
-    <path refid="${module.jdk.classpath.egdp}"/>
-  </path>
+  <path id="egdp.module.production.classpath"/>
   
   <path id="egdp.runtime.production.module.classpath">
     <pathelement location="${egdp.output.dir}"/>
   </path>
   
   <path id="egdp.module.classpath">
-    <path refid="${module.jdk.classpath.egdp}"/>
     <pathelement location="${egdp.output.dir}"/>
   </path>
   
@@ -234,15 +103,15 @@
   
   <target name="compile.module.egdp" depends="compile.module.egdp.production,compile.module.egdp.tests" description="Compile module eGDP"/>
   
-  <target name="compile.module.egdp.production" depends="register.custom.compilers" description="Compile module eGDP; production classes">
+  <target name="compile.module.egdp.production" description="Compile module eGDP; production classes">
     <mkdir dir="${egdp.output.dir}"/>
-    <javac2 destdir="${egdp.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.egdp}/javac">
+    <javac destdir="${egdp.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true">
       <compilerarg line="${compiler.args.egdp}"/>
       <bootclasspath refid="egdp.module.bootclasspath"/>
       <classpath refid="egdp.module.production.classpath"/>
       <src refid="egdp.module.sourcepath"/>
       <patternset refid="excluded.from.compilation.egdp"/>
-    </javac2>
+    </javac>
     
     <copy todir="${egdp.output.dir}">
       <fileset dir="${module.egdp.basedir}/src">
@@ -252,7 +121,7 @@
     </copy>
   </target>
   
-  <target name="compile.module.egdp.tests" depends="register.custom.compilers,compile.module.egdp.production" description="compile module eGDP; test classes" unless="skip.tests"/>
+  <target name="compile.module.egdp.tests" depends="compile.module.egdp.production" description="compile module eGDP; test classes" unless="skip.tests"/>
   
   <target name="clean.module.egdp" description="cleanup module">
     <delete dir="${egdp.output.dir}"/>
