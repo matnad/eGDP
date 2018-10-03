@@ -6,7 +6,7 @@ public class Kreis {
     public static void main(String args[]) {
         //creates a new instance of the ImageWindow Class
         //with a viewable image area of 500x500 pixels
-        int dim = 500;
+        final int dim = 500;
         ImageWindow w = new ImageWindow(dim,dim);
 
         //opens the corresponding window (makes it visible)
