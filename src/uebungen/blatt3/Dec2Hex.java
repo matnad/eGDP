@@ -57,7 +57,7 @@ public class Dec2Hex {
 		// Return hex string
 		return hex.toString();
 	}
-	
+
 	/*
 	 * Try to convert the input to an integer or exit the program with an error
 	 */ 
