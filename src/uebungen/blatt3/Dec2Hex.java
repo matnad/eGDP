@@ -1,7 +1,9 @@
 package uebungen.blatt3;
 
 public class Dec2Hex {
-
+	/*
+	 * Convert a decimal number to the hex format
+	 */
 	public static void main(String[] args) {
 		if (args.length != 1) {
 			System.out.println("Bitte rufen Sie das Programm mit einem Eingabewert auf.");
@@ -15,7 +17,10 @@ public class Dec2Hex {
 
 	}
 
-	/* Convert Dec to Hex */
+	/* 
+	 * Conversion algorithm
+	 * Returns hex number as a String
+	 */
 	public static String dec2hex(int dec) {
 		// Initialize StringBuilder
 		StringBuilder hex = new StringBuilder("0x");
@@ -49,15 +54,18 @@ public class Dec2Hex {
 			}
 		} while(dec > 0);
 
-		// return hex string
+		// Return hex string
 		return hex.toString();
 	}
-
+	
+	/*
+	 * Try to convert the input to an integer or exit the program with an error
+	 */ 
 	public static int tryParse(String number) {
 		try {
 			return Integer.parseInt(number);
 		} catch (NumberFormatException e) {
-			return 0;
+			throw new java.lang.Error("Could not convert input to integer.");
 		}
 	}
 
