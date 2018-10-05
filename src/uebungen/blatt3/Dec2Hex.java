@@ -33,7 +33,7 @@ public class Dec2Hex {
 			int hex_digit = dec % 16;
 			dec /= 16;
 			switch (hex_digit) {
-				case 10: 	
+				case 10: 	hex.insert(insert_position, "A");
 							break;
 				case 11: 	hex.insert(insert_position, "B"); 
 							break;
