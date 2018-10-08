@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"ch.unibas.informatik.cs101","l":"ImageWindow"}]
