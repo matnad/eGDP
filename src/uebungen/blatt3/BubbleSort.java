@@ -6,21 +6,40 @@ class BubbleSort {
 	   * Vertauscht zwei Werte in einem Array an den gegebenen Positionen.
 	   **/
 	  public static void swap(int i, int j, char[] characters) {
-	    /* Diese Methode muss implementiert werden */
+	    /* DONE: Diese Methode muss implementiert werden */
+          char temp = characters[i];
+          characters[i] = characters[j];
+          characters[j] = temp;
 	  }
 
 	  /**
 	   * Sortiert das Eingabearray und aendert das Array in place
 	   **/
 	  public static void sort(char[] characters) {
-	    /* Diese Methode muss implementiert werden */
+	    /**
+	     * DONE: Diese Methode muss implementiert werden
+	     * TODO: Ist "A" oder "a" grösser?
+	     */
+		  boolean done = false;
+
+		  while(!done){
+		      done = true;
+			  for(int i=0; i<characters.length-1; i++){
+				  int a = Character.getNumericValue(characters[i]);
+				  int b = Character.getNumericValue(characters[i+1]);
+				  if (b > a) {
+                      swap(i, i + 1, characters);
+                      done = false;
+                  }
+			  }
+		  }
 	  }
 
 	  /**
 	   * Schreibt das Array auf die Ausgabekonsole
 	   **/
 	  public static void displayArray(char[] characters) {
-	    /* Diese Methode muss implementiert werden */
+	    /* DONE: Diese Methode muss implementiert werden */
 		  System.out.println(characters);
 	  }
 

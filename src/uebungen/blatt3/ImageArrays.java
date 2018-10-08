@@ -4,11 +4,12 @@ import ch.unibas.informatik.cs101.ImageWindow;
 
 public class ImageArrays {
 
-    static final int dim = 500; // all code is only for square image
-    static final int dimsq = dim*dim;
-    static final int img_len = dimsq*3;
+    private static final int dim = 500; // all code is only for square image
+    private static final int dimsq = dim*dim;
+    private static final int img_len = dimsq*3;
 
-	public static void main(String[] args) {
+	@SuppressWarnings("SuspiciousNameCombination")
+    public static void main(String[] args) {
 		//create & open the first window (to display the source image)
 
 
@@ -22,14 +23,14 @@ public class ImageArrays {
 		sourceWindow.redraw();
 
 
-		/*  TODO: create an array that is large enough to hold
+		/*  DONE: create an array that is large enough to hold
 		 *       the complete image information
 		 */
 
         int[] img_arr = new int[img_len];
 
 
-		/*  TODO: store the complete image information in the
+		/*  DONE: store the complete image information in the
          *        array you have created.
          *        HINT: int red=sourceWindow.getPixelRed(xPosition, yPosition);
 		 *        int green=sourceWindow.getPixelGreen(xPosition, yPosition);
@@ -55,7 +56,7 @@ public class ImageArrays {
 
 
 
-		/*  TODO: write back your array data into the destinationWindow so that
+		/*  DONE: write back your array data into the destinationWindow so that
                  *        it appears to be rotated 90 degrees.
                  *  HINT: destinationWindow.setPixel(xPos,yPos,red,green,blue);
 		 */
@@ -91,7 +92,7 @@ public class ImageArrays {
 
 
 
-                /*  TODO: call here your function which permutes the color channels
+                /*  DONE: call here your function which permutes the color channels
                  */
 
                 permute_colors(img_arr, destinationWindow2);
@@ -101,11 +102,11 @@ public class ImageArrays {
 	}
 
 
-        /*  TODO: implement here the function to rotate the color channels.
+        /*  DONE: implement here the function to rotate the color channels.
          *  HINT: think about the arguments you need for the function.
          */
 
-    static void permute_colors(int[] img_arr, ImageWindow destinationWindow){
+    private static void permute_colors(int[] img_arr, ImageWindow destinationWindow){
 
         // generate new array and apply all the mutations
         int[] new_img_arr = new int[img_len];
@@ -130,7 +131,7 @@ public class ImageArrays {
             }
         }
 
-        // write new array to the destionationWindow
+        // write new array to the destinationWindow
         for(int y=0; y<dim; y++){
             for(int x=0; x<dim; x++) {
                 // get 1-D position
@@ -141,7 +142,7 @@ public class ImageArrays {
                 int green = new_img_arr[pos + dimsq];
                 int blue = new_img_arr[pos + dimsq + dimsq];
 
-                // set pixel in destionationWindow
+                // set pixel in destinationWindow
                 destinationWindow.setPixel(x, y, red, green, blue);
             }
         }
