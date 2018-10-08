@@ -18,16 +18,14 @@ class BubbleSort {
 	  public static void sort(char[] characters) {
 	    /**
 	     * DONE: Diese Methode muss implementiert werden
-	     * TODO: Ist "A" oder "a" grösser?
+	     * DONE: Ist "A" oder "a" grösser? -> Direkter vergleich ohne methoden/funktionen
 	     */
 		  boolean done = false;
 
 		  while(!done){
 		      done = true;
 			  for(int i=0; i<characters.length-1; i++){
-				  int a = Character.getNumericValue(characters[i]);
-				  int b = Character.getNumericValue(characters[i+1]);
-				  if (b > a) {
+				  if (characters[i+1] > characters[i]) {
                       swap(i, i + 1, characters);
                       done = false;
                   }
