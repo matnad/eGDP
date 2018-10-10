@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="egdp" default="all">
-  
-  
+  <presetdef name="javac">
+    <javac includeantruntime="false" />
+  </presetdef>
   <property file="build.properties"/>
   <!-- Uncomment the following property if no tests compilation is needed -->
   <!-- 
@@ -61,7 +62,7 @@
   
   
   
-  <property name="compiler.args.egdp" value="-encoding UTF-8 -source 10 -target 10 ${compiler.args}"/>
+  <property name="compiler.args.egdp" value="-encoding UTF-8 ${compiler.args}"/>
   
   <property name="egdp.output.dir" value="${module.egdp.basedir}/out/production/eGDP"/>
   <property name="egdp.testoutput.dir" value="${module.egdp.basedir}/out/test/eGDP"/>
