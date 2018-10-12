@@ -8,7 +8,7 @@ public class ImageArrays {
     private static final int dimsq = dim*dim;
     private static final int img_len = dimsq*3;
 
-	@SuppressWarnings("SuspiciousNameCombination")
+
     public static void main(String[] args) {
 		//create & open the first window (to display the source image)
 

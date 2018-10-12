@@ -27,7 +27,7 @@ import javax.swing.JFrame;
  * @author matthias
  *
  */
-@SuppressWarnings("serial")
+
 public class ImageWindow extends Component {
 	
 
