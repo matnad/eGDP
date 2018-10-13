@@ -20,7 +20,7 @@ public class Turtle {
      *
      * x and y axes are "reversed" to allow pos[direction % 2] to get the correct axis to move along
      */
-    Turtle(ImageWindow w){
+    public Turtle(ImageWindow w){
         this.w = w;
         pos[1] = this.w.getWidth()/2; // x-axis
         pos[0] = this.w.getHeight()/2; // y-axis
@@ -31,7 +31,7 @@ public class Turtle {
     /**
      * Put the pen down if it is not. Lift the pen if it is down.
      */
-    void toggle_pen(){
+    public void toggle_pen(){
         pen = !pen;
     }
 
@@ -40,22 +40,22 @@ public class Turtle {
      * @param turn_x_times
      * All the following methods call this one with different parameters
      */
-    void turn_clockwise(int turn_x_times){
+    public void turn_clockwise(int turn_x_times){
         if (turn_x_times < 0)
             turn_x_times = Math.abs(turn_x_times) + 2;
         direction += turn_x_times;
         direction %= 4;
     }
 
-    void turn_clockwise(){
+    public void turn_clockwise(){
         turn_clockwise(1);
     }
 
-    void turn_counter_clockwise(int turn_x_times){
+    public void turn_counter_clockwise(int turn_x_times){
         turn_clockwise(2 + turn_x_times);
     }
 
-    void turn_counter_clockwise (){
+    public void turn_counter_clockwise (){
         turn_counter_clockwise(1);
     }
 
@@ -67,7 +67,7 @@ public class Turtle {
      * @param green the green part of the color 0-255
      * @param blue the blue part of the color 0-255
      */
-    void move(int step, int red, int green, int blue){
+    public void move(int step, int red, int green, int blue){
         int height = w.getHeight();
         int width = w.getWidth();
         if(pen){
@@ -102,7 +102,7 @@ public class Turtle {
     /**
      * Move 1 step with default color
      */
-    void move(){
+    public void move(){
         move(1);
     }
 
@@ -110,7 +110,7 @@ public class Turtle {
      * Move the turtle and use the default color black
      * @param step the amount of pixels to move
      */
-    void move(int step){
+    public void move(int step){
         move(step, 0,0, 0);
     }
 }
