@@ -41,8 +41,10 @@ public class Turtle {
      * All the following methods call this one with different paraameters
      */
     void turn_clockwise(int turn_x_times){
+        if (turn_x_times < 0)
+            turn_x_times = Math.abs(turn_x_times) + 2;
         direction += turn_x_times;
-        direction = (direction+4) % 4; // to allow negative turns
+        direction %= 4;
     }
 
     void turn_clockwise(){
