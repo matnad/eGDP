@@ -5,7 +5,7 @@ class BubbleSort {
 	  /**
 	   * Vertauscht zwei Werte in einem Array an den gegebenen Positionen.
 	   **/
-	  public static void swap(int i, int j, char[] characters) {
+	  private static void swap(int i, int j, char[] characters) {
 	    /* DONE: Diese Methode muss implementiert werden */
           char temp = characters[i];
           characters[i] = characters[j];
@@ -15,8 +15,8 @@ class BubbleSort {
 	  /**
 	   * Sortiert das Eingabearray und aendert das Array in place
 	   **/
-	  public static void sort(char[] characters) {
-	    /**
+	  private static void sort(char[] characters) {
+	    /*
 	     * DONE: Diese Methode muss implementiert werden
 	     * DONE: Ist "A" oder "a" grösser? -> Direkter vergleich ohne methoden/funktionen
 	     */
@@ -36,7 +36,7 @@ class BubbleSort {
 	  /**
 	   * Schreibt das Array auf die Ausgabekonsole
 	   **/
-	  public static void displayArray(char[] characters) {
+	  private static void displayArray(char[] characters) {
 	    /* DONE: Diese Methode muss implementiert werden */
 		  System.out.println(characters);
 	  }

@@ -8,10 +8,10 @@ import ch.unibas.informatik.cs101.ImageWindow;
  * It can move in the 4 basic directions and wrap around the Image
  */
 public class Turtle {
-    public ImageWindow w;
-    public  int[] pos = new int[2];
-    public int direction; // 4 directions. 0 = north
-    public boolean pen;
+    private final ImageWindow w;
+    private final int[] pos = new int[2];
+    private int direction; // 4 directions. 0 = north
+    private boolean pen;
 
     /**
      * Initialize Turtle in the middle of the window
@@ -38,7 +38,7 @@ public class Turtle {
     /**
      * Turn the turtle clockwise x times
      * @param turn_x_times
-     * All the following methods call this one with different paraameters
+     * All the following methods call this one with different parameters
      */
     void turn_clockwise(int turn_x_times){
         if (turn_x_times < 0)

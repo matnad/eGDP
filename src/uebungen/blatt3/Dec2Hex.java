@@ -24,7 +24,7 @@ public class Dec2Hex {
 	 * Conversion algorithm
 	 * Returns hex number as a String
 	 */
-	public static String dec2hex(int dec) {
+	private static String dec2hex(int dec) {
 		// Initialize StringBuilder
 		StringBuilder hex = new StringBuilder("0x");
 		int insert_position = 2;
@@ -51,8 +51,8 @@ public class Dec2Hex {
 
 	/*
 	 * Try to convert the input to an integer or exit the program with an error
-	 */ 
-	public static int tryParse(String number) {
+	 */
+	private static int tryParse(String number) {
 		try {
 			return Integer.parseInt(number);
 		} catch (NumberFormatException e) {

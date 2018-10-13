@@ -29,7 +29,7 @@ public class Bin2Dec {
 	/*
 	 * Try to convert a string to a 0 or 1 and display appropriate errors.
 	 */
-	public static int tryParse(String number) {
+	private static int tryParse(String number) {
 		// error handling
 		try {
 			int parsed_int = Integer.parseInt(number);

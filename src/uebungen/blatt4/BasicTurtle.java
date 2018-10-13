@@ -15,7 +15,7 @@ public class BasicTurtle {
         Turtle turtle1 = new Turtle(w);
         Turtle turtle2 = new Turtle(w);
 
-        //excercise 2.e.i
+        //exercise 2.e.i
         turtle1.move(100);
         turtle1.toggle_pen();
         turtle1.turn_counter_clockwise();
@@ -31,7 +31,7 @@ public class BasicTurtle {
         turtle1.turn_clockwise();
         turtle1.move(50, 222, 111, 0);
 
-        //excercise 2.e.ii
+        //exercise 2.e.ii
         int step_size = 60;
         int[][] colors = {{0,0,255},{0,255,0},{255,0,0},{100,100,100}};
 
