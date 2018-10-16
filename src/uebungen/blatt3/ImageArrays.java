@@ -4,12 +4,12 @@ import ch.unibas.informatik.cs101.ImageWindow;
 
 public class ImageArrays {
 
-    private final int dim = 500; // all code is only for square image
-    private final int dimsq = dim*dim;
-    private final int img_len = dimsq*3;
+    private static final int dim = 500; // all code is only for square image
+    private static final int dimsq = dim*dim;
+    private static final int img_len = dimsq*3;
 
 
-    public void main(String[] args) {
+    public static void main(String[] args) {
 		//create & open the first window (to display the source image)
 
 
@@ -106,7 +106,7 @@ public class ImageArrays {
          *  HINT: think about the arguments you need for the function.
          */
 
-    private void permute_colors(int[] img_arr, ImageWindow destinationWindow){
+    static private void permute_colors(int[] img_arr, ImageWindow destinationWindow){
 
         // generate new array and apply all the mutations
         int[] new_img_arr = new int[img_len];
