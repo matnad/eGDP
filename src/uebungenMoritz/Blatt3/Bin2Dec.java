@@ -9,9 +9,9 @@ public class Bin2Dec {
         int a = 1;
         int c = args.length;
 
-        for ( int i = c; i >= 1; i--) {
+        for ( int i = c-1; i >= 0; i--) {
 
-            int b = Integer.parseInt(args[i-1]);
+            int b = Integer.parseInt(args[i]);
             dec = dec + b * a;
             a *= 2;
 

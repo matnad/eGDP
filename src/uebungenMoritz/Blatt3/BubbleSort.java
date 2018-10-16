@@ -6,13 +6,12 @@ public class BubbleSort {
      * Vertauscht zwei Werte in einem Array an den gegebenen Positionen.
      **/
     public static void swap(int i, int j, char[] characters) {
-        /* Diese Methode muss implementiert werden */
-        while(characters[i] > characters[j]){
-            char b = characters[i];
+
+        char b = characters[i];
             characters[i] = characters[j];
             characters[j] = b;
         }
-    }
+
 
     /**
      * Sortiert das Eingabearray und aendert das Array in place
@@ -21,6 +20,7 @@ public class BubbleSort {
         /* Diese Methode muss implementiert werden */
         for(int y = 0; y < characters.length; y++) {
             for (int i = 0, j = 1; j < characters.length; i++, j++) {
+                while(characters[i] > characters[j])
                 swap(i, j, characters);
 
             }
