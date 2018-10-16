@@ -15,16 +15,18 @@ public class Bin2Dec {
 			throw new java.lang.Error("Call the program with at least one parameter.");
 
 		// Convert Binary to Decimal
-		int dec = 0;
-		for(int i=bin_len-1; i >= 0; i--) {
-			int bin_digit = tryParse(args[i]); // will throw an error if not 0 or 1    
-			dec += Math.pow(2,bin_len-1-i)*bin_digit;  // conversion math
-		}
+        int dec = 0;
+        int a = 1;
+
+        for ( int i = bin_len-1; i >= 0; i--) {
+            int b = tryParse(args[i]);
+            dec += b * a;
+            a *= 2;
+        }
 
 		// print result
 		System.out.println(dec);
 	}
-
 
 	/*
 	 * Try to convert a string to a 0 or 1 and display appropriate errors.

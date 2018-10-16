@@ -13,7 +13,6 @@ public class Dec2Hex {
 			System.exit(-1);
 		}
 		int dec = tryParse(args[0]);
-		//int dec = 87894745;
 		String hex = dec2hex(dec);
 
 		System.out.println(hex);
