@@ -22,14 +22,8 @@ public class PriorityQueue {
          */
         for (int i=0; i<len; i++) {
             if (x.getPriority() > q[i].getPriority()){
-                try {
-                    System.arraycopy(q, i, q, i+1, len-i); //  faster & better than manual array copy
-                    q[i] = x;
-                } catch (Exception e) {
-                    System.out.println("Error while trying to insert a new element into the PriorityQueue.");
-                    System.out.println(e);
-                    return false;
-                }
+                System.arraycopy(q, i, q, i+1, len-i); //  faster & better than manual array copy
+                q[i] = x;
                 len++;
                 return true;
             }
@@ -42,7 +36,6 @@ public class PriorityQueue {
         len++;
         return true;
     }
-
     /**
      * Return the element with the highest priority from the queue and remove that element from the queue.
      * @return element with highest priority
