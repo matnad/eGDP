@@ -1,7 +1,5 @@
 package uebungen.blatt5;
 
-import java.util.*;
-
 
 public class Palindrom {
 
@@ -25,10 +23,10 @@ public class Palindrom {
         int i = 0; int j = t.length-1;
         while (i <= j) {
 
-            if (!is_valid_char(t[i])) {
+            if (is_invalid_char(t[i])) {
                 i++; continue; }
 
-            if (!is_valid_char(t[j])) {
+            if (is_invalid_char(t[j])) {
                 j--; continue; }
 
             if (t[i] == t[j]) {
@@ -42,15 +40,12 @@ public class Palindrom {
 
 
     /**
-     * Check if a char is to be considered when checking if the String is a Paldindrome
+     * Check if a char is to be considered when checking if the string is a palindrome
      * @param c the char to check
      * @return true if the char is valid and to be considered, false if the char should be skipped
      */
-    public static boolean is_valid_char(char c) {
-        if (c >= 97 && (c <= 122 || c == 228 || c == 246 || c == 252))
-            return true;
-        else
-            return false;
+    public static boolean is_invalid_char(char c) {
+        return c < 97 || (c > 122 && c != 228 && c != 246 && c != 252);
     }
 //    public static boolean testPalindrome(String text){
 //
