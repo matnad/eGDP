@@ -38,10 +38,7 @@ class BubbleSortVis {
                     swap(i, i + 1, characters);
                     done = false;
                     show(characters, w);
-
-
                 }
-
 
 
             }
@@ -68,26 +65,24 @@ class BubbleSortVis {
             System.exit(-1);
         }
 
-        w = new ImageWindow(500,500);
+        w = new ImageWindow(500, 500);
         w.openWindow();
         char[] characters = args[0].toCharArray();
-        for(int i = 0;i < characters.length;i++){
-            if(orange_max < characters[i] ){
+        for (int i = 0; i < characters.length; i++) {
+            if (orange_max < characters[i]) {
                 orange_max = characters[i];
             }
 
         }
 
-        show(characters,w);
+        show(characters, w);
         sort(characters, w);
-
-
 
 
         displayArray(characters);
     }
 
-       private static void show(char[] characters,ImageWindow w) {
+    private static void show(char[] characters, ImageWindow w) {
 
 
         int breite;
@@ -96,28 +91,30 @@ class BubbleSortVis {
         for (int x = 0; x < 500; x++) {
 
 
-           if (x > breite * (i+1)) {
-               i++;
-           }
+            if (x % breite == 0 && i < characters.length-1) {
+                i = x / breite;
+            }
 
-               int red = 0;
-               int green = 0;
-               int blue = 255;
-               red = red + (characters[i] * 255 / orange_max);
-               green = green + (characters[i] * 100  / orange_max);
-               blue = blue - (characters[i] * 255 / orange_max);
+            int red = 0;
+            int green = 0;
+            int blue = 255;
+            red = red + (characters[i] * 255 / orange_max);
+            green = green + (characters[i] * 100 / orange_max);
+            blue = blue - (characters[i] * 255 / orange_max);
 
 
-               for (int y = 500 - (characters[i] * 3); y < 500; y++) {
-                   w.setPixel(x, y, red, green, blue);
-               }
+            for (int y = 0; y < 500; y++) {
+                if (y > 500 - characters[i]) {
+                    w.setPixel(x, y, red, green, blue);
+                } else w.setPixel(x, y, 255, 255, 255);
+
+            }
+
+            w.redraw();
+          //  w.pause(10);
 
         }
 
-        w.redraw();
-        w.pause(10);
-
     }
-
 }
 
