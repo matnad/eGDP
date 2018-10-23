@@ -79,7 +79,7 @@ public class Turtle {
                     case 0: y--; y = (y+height) % height; break;
                     case 1: x++; x %= width; break;
                     case 2: y++; y %= height; break;
-                    case 3: x--; x = (x+width) % w.getWidth(); break;
+                    case 3: x--; x = (x+width) % width; break;
                 }
                 w.setPixel(x, y, red, green, blue);
             }

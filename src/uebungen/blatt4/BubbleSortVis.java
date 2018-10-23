@@ -47,9 +47,9 @@ public class BubbleSortVis {
                 if (characters[i+1] < characters[i]) {
                     swap(i, i + 1, characters);
                     done = false;
+                    drawArray(characters, w); // draw the array after each swap
                 }
             }
-            drawArray(characters, w); // draw the array after each loop
         }
     }
 
@@ -124,9 +124,9 @@ public class BubbleSortVis {
         /*
          * Set up char array
          */
-        //char[] characters = args[0].toCharArray();
-        String test = "!?ThE-qUiCk'bRoWn=fOx]JuMpS&oVEr$tHe#LaZy}DOg";
-        char[] characters = test.toCharArray();
+        char[] characters = args[0].toCharArray();
+        //String test = "!?ThE-qUiCk'bRoWn=fOx]JuMpS&oVEr$tHe#LaZy}DOg";
+        //char[] characters = test.toCharArray();
 
         /*
          * Generate color difference array
