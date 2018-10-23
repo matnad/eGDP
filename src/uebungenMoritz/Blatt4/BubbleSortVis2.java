@@ -4,7 +4,7 @@ import ch.unibas.informatik.cs101.ImageWindow;
 
 
 
-class BubbleSortVis {
+class BubbleSortVis2 {
 
     private static ImageWindow w;
     private static int orange_max = 0;
@@ -37,7 +37,7 @@ class BubbleSortVis {
                 if (characters[i + 1] < characters[i]) {
                     swap(i, i + 1, characters);
                     done = false;
-                    show(characters, w);
+                    show(characters, w,i-1,i+1);
                 }
 
 
@@ -75,20 +75,20 @@ class BubbleSortVis {
 
         }
 
-        show(characters, w);
+        show(characters, w, 0,characters.length-1);
         sort(characters, w);
 
 
         displayArray(characters);
     }
 
-    private static void show(char[] characters, ImageWindow w) {
+    private static void show(char[] characters, ImageWindow w, int a, int b) {
 
 
         int breite;
         breite = 500 / characters.length;
-        int i = 0;
-        for (int x = 0; x < 500; x++) {
+        int i = a;
+        for (int x = breite * a; x < breite * b; x++) {
 
 
             if (x % breite == 0 && i < characters.length-1) {
