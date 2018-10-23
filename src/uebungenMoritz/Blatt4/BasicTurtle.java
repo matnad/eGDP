@@ -40,7 +40,7 @@ public class BasicTurtle {
                 turtle2.turn(1);
                 turtle2.move(150);
                 turtle2.turn_pen();
-            for (int i = 0; i < colors.length; i++) {
+            for (int i = 0; i < colors.length-1; i++) {
 
                 turtle2.move(40,colors[i+1],0,colors[i]);
                 turtle2.turn(1);
