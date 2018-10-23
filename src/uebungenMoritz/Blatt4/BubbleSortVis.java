@@ -92,7 +92,7 @@ class BubbleSortVis {
 
 
             if (x % breite == 0 && i < characters.length-1) {
-                i = x / breite;
+                i++;
             }
 
             int red = 0;
@@ -104,16 +104,17 @@ class BubbleSortVis {
 
 
             for (int y = 0; y < 500; y++) {
-                if (y > 500 - characters[i]) {
+                if (y > 500 - characters[i]*3) {
                     w.setPixel(x, y, red, green, blue);
                 } else w.setPixel(x, y, 255, 255, 255);
 
             }
 
-            w.redraw();
-          //  w.pause(10);
+
 
         }
+        w.redraw();
+        w.pause(10);
 
     }
 }
