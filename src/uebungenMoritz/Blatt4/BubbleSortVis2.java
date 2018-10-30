@@ -4,6 +4,7 @@ import ch.unibas.informatik.cs101.ImageWindow;
 
 
 
+@SuppressWarnings("Duplicates")
 class BubbleSortVis2 {
 
     private static ImageWindow w;
