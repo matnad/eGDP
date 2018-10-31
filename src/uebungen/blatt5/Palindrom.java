@@ -4,8 +4,8 @@ package uebungen.blatt5;
 public class Palindrom {
 
     public static void main(String args[]) {
-        //String text = args[0];
-        String text = "Eine güldne, gute Tugend: Lüge nie!";
+        String text = args[0];
+        //String text = "Eine güldne, gute Tugend: Lüge nie!";
         boolean test = testPalindrome(text);
         System.out.println(test);
     }

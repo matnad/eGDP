@@ -3,9 +3,10 @@ package uebungen.blatt5;
 public class Anagramm {
 
     public static void main(String args[]) {
-        //String text = args[0];
-        String text1 = "Dackel entlief Bassist -";
-        String text2 = "Das laesst tief blicken.";
+        String text1 = args[0];
+        String text2 = args[1];
+        //String text1 = "Dackel entlief Bassist -";
+        //String text2 = "Das laesst tief blicken.";
         boolean test = testAnagramm(text1, text2);
         System.out.println(test);
     }
