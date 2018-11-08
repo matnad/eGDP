@@ -9,13 +9,9 @@ class Kassenbon {
 
     private static final int BREITE = 35;
 
-    Kassenbon(Adresse adresse) {
-        this.adresse = adresse;
-    }
+    Kassenbon(Adresse adresse) { this.adresse = adresse; }
 
-    void add(Artikel artikel) {
-        this.artikel.add(artikel);
-    }
+    void add(Artikel artikel) { this.artikel.add(artikel); }
 
     private double getTotal() {
         double total = 0;
@@ -33,9 +29,7 @@ class Kassenbon {
                 "\n" + "==============================================================".substring(0, BREITE);
     }
 
-    void print() {
-        System.out.println(this);
-    }
+    void print() { System.out.println(this); }
 
     @Override
     public String toString() {
