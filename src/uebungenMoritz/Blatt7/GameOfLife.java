@@ -2,9 +2,9 @@ package uebungenMoritz.Blatt7;
 import java.util.Random;
 public class GameOfLife {
 
-    boolean[][] feld;
-    static int x;
-    static int y;
+    private boolean[][] feld;
+    private int x;
+    private int y;
 
 
     GameOfLife(){
@@ -52,8 +52,9 @@ public class GameOfLife {
       return  a.toString();
     }
 
-    static String text (boolean[][] ende) {
+     String text (boolean[][] ende) {
         StringBuilder out = new StringBuilder();
+
         for (int i = 0; i < x; i++) {
             for (int j = 0; j < y; j++) {
                 if (ende[i][j]) {
@@ -69,11 +70,11 @@ public class GameOfLife {
 
 
 
-    static boolean[][] tauschen(boolean[][] feld) {
+    private boolean[][] tauschen(boolean[][] feld) {
         boolean [][] feld2 = new boolean[x][y];
         int z;
-        int f = 0;
-        int g = 0;
+        int f;
+        int g;
         for (int i = 0; i < x; i++) {
             for (int j = 0; j < y; j++) {
                 z = 0;
