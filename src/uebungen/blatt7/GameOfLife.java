@@ -12,7 +12,14 @@ class GameOfLife {
     private final boolean image;
 
     GameOfLife() {
-        this(6);
+        this.SIZE = 6;
+         field = new boolean[][] {{false, false, false, false, false, false},
+                {false, true, false, true, false, false},
+                {false, false, true, true, false, false},
+                {false, false, true, false, false, false},
+                {false, false, false, false, false, false},
+                {false, false, false, false, false, false}};
+        this.image = false;
     }
 
     GameOfLife(int size, boolean image) {
