@@ -53,7 +53,7 @@ public class Mandelbrot {
                 Complex z0 = new Complex((c_origin.real()+c_step*i), (c_origin.imag()+c_step*j));
                 Complex z=z0;
                 for (int t = 0; t < max_iter; t++) {
-                    if (z.abs_sqr() > 2.0) {flug=t; break;}
+                    if (z.abs_sqr() > 4.0) {flug=t; break;}
                     else { z = z.sqr().add(z0); }
                 }
                 Color col = colPal.getColor(flug, z);
