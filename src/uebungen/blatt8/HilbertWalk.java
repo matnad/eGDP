@@ -40,7 +40,7 @@ public class HilbertWalk {
     private static void hilbert(Walker w, int depth) {
         if (depth == 0) return;
         w.turn(90);
-        treblih(w, depth-1);
+        hilbert2(w, depth-1);
         w.move(distance);
         w.turn(-90);
         hilbert(w, depth-1);
@@ -48,19 +48,19 @@ public class HilbertWalk {
         hilbert(w, depth-1);
         w.turn(-90);
         w.move(distance);
-        treblih(w,depth-1);
+        hilbert2(w,depth-1);
         w.turn(90);
     }
 
-    private static void treblih(Walker w, int depth) {
+    private static void hilbert2(Walker w, int depth) {
         if (depth == 0) return;
         w.turn(-90);
         hilbert(w, depth-1);
         w.move(distance);
         w.turn(90);
-        treblih(w, depth-1);
+        hilbert2(w, depth-1);
         w.move(distance);
-        treblih(w, depth-1);
+        hilbert2(w, depth-1);
         w.turn(90);
         w.move(distance);
         hilbert(w, depth-1);
