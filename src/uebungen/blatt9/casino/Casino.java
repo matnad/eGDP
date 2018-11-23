@@ -109,7 +109,7 @@ class Casino {
     private void gamblerWon(Gambler player, boolean blackjack) {
         if (blackjack) {
             player.incrementWealth((int) (1.5*bet));
-            player.sendMessage(String.format("$$ BLACK JACK $$ You hit exactly 21 with your cards and won %d credits!", (int) (2.5*bet)));
+            player.sendMessage(String.format("$$ BLACK JACK $$ You hit a Black Jack and won %d credits!", (int) (2.5*bet)));
         } else {
             player.incrementWealth(bet);
             player.sendMessage(String.format("%d credits have been added to your account!", 2*bet));
@@ -192,7 +192,8 @@ class Casino {
         if (checkBust(player)) {
             return;
         }
-        if (player.getScore() == 21) {
+
+        if (player.isBlackjack()) {
             yeahBlackJack(player);
             return;
         }

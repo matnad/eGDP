@@ -92,6 +92,15 @@ abstract class Player {
         score = 0;
     }
 
+    boolean isBlackjack() {
+        if (getCards().size() == 2) {
+            return getCards().get(0).isAce() && getCards().get(1).isPicture() ||
+                    getCards().get(1).isAce() && getCards().get(0).isPicture();
+        }
+        return false;
+    }
+
+
     int getScore() {
         return score;
     }

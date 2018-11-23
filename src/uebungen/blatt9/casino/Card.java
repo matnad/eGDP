@@ -119,6 +119,10 @@ public class Card implements Comparable<Card>{
         return this.face.id == 12;
     }
 
+    boolean isPicture() {
+        return (this.face.id == 9 || this.face.id == 10 || this.face.id == 11);
+    }
+
     /**
      * @return String with full name of the card e.g. "ace of spades"
      */
