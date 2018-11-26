@@ -4,8 +4,8 @@ public abstract class Knoten {
     public int schluessel;
     public int anzahlKnoten;
 
-    Knoten(int s){
-        schluessel = s;
+    Knoten(int a){
+        schluessel = a;
     }
 
     public int getSchluessel() {
