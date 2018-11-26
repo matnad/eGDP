@@ -73,8 +73,8 @@ public class GOLFenster extends Component {
                 int y = e.getY()/4;
                 System.out.print(x);
                 System.out.println(y);
-                if(!gameOfLife.feld[x][y]){
-                    gameOfLife.feld[x][y] = true;
+                if(!gameOfLife.feld[y][x]){
+                    gameOfLife.feld[y][x] = true;
                 }
 
             }

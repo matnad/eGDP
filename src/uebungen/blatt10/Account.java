@@ -8,7 +8,7 @@ package uebungen.blatt10;
  * Fehler 5: i in der for schleife ist nicht initialisiert: int i; ...
  * Fehler 6: for schleife führt zu index out of bounds, da sie versucht über 3 elemente zu iterieren: ...; i < accounts.length; ...
  * Anmerkung1: Formatierung für geldbeträge sollte .2f sein.
- * Anmerkung2: For loop wäre schöner als for each loop, um Fehler wie Fehler 6 zu vermeiden.
+ * Anmerkung2: For each loop wäre schöner als for loop, um Fehler wie Fehler 6 zu vermeiden.
  */
 
 

@@ -1,16 +1,32 @@
 package uebungen.blatt10;
 
 import java.io.*;
-import java.util.HashMap;
+import java.nio.file.*;
+import java.util.*;
+import java.util.stream.*;
 
 public class Post {
 
     private final BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-    private HashMap<Integer, String> entries = new HashMap<>();
+    private Map<Integer, String> entries = new HashMap<>();
 
 
     Post() {
         loadFile("resources/Adressdaten.csv");
+    }
+
+    void loadFileStream(String path) {
+        Stream<String> csv = null;
+        try {
+            csv = Files.lines(Paths.get(path));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        if (csv != null) {
+            entries = csv.map(x -> x.split(";")).filter(x -> x.length > 6).collect(Collectors.toMap(x -> Integer.parseInt("1"), x -> "ok"));
+            csv.close();
+        }
     }
 
     void loadFile(String path){

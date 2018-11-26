@@ -8,7 +8,7 @@ import java.awt.event.MouseListener;
 public class GOLFenster extends Component {
 
     private GameOfLife gameOfLife;
-    private final int CELLSIZE = 15;
+    private final int CELLSIZE = 5;
     private JFrame jFrame;
 
     private GOLFenster(GameOfLife gameOfLife) {
@@ -24,14 +24,14 @@ public class GOLFenster extends Component {
     }
 
     public static void main(String[] args) {
-        GOLFenster golFenster = new GOLFenster(new GameOfLife(60));
-        golFenster.run(1000);
+        GOLFenster golFenster = new GOLFenster(new GameOfLife(150));
+        golFenster.run(2000);
     }
 
     private void run(int n){
         for (int i = 0; i < n; i++) {
             try {
-                Thread.sleep(200);
+                Thread.sleep(50);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

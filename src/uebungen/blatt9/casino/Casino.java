@@ -47,9 +47,8 @@ class Casino {
     }
 
     private void waitingForRound() {
-        Player player = gambler; // can loop over gamblers here for multiplayer
-        player.sendMessage(System.lineSeparator()+String.format("Waiting to start a new round of BlackJack. Your current balance is %d credits." +
-                " How much do you want to bet?", ((Gambler) player).getWealth() ));
+        gambler.sendMessage(System.lineSeparator()+String.format("Waiting to start a new round of BlackJack. Your current balance is %d credits." +
+                " How much do you want to bet?", gambler.getWealth() ));
     }
 
     /**
@@ -60,11 +59,11 @@ class Casino {
     boolean requestCard(Player player) {
         if (player.isDealer() == dealersTurn) {
             dealCard(player);
-            if(!checkBust(player)) {
+            if (checkBust(player)) {
+                return false;
+            } else {
                 sendCardOrStop(player);
                 return true;
-            } else {
-                return false;
             }
         } else {
             player.sendMessage("Can't request a card when its not your turn.");
