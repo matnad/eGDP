@@ -71,8 +71,6 @@ public class GOLFenster extends Component {
             public void mouseClicked(MouseEvent e) {
                 int x = e.getX()/4;
                 int y = e.getY()/4;
-                System.out.print(x);
-                System.out.println(y);
                 if(!gameOfLife.feld[y][x]){
                     gameOfLife.feld[y][x] = true;
                 }
