@@ -50,9 +50,7 @@ public class Deck {
     }
 
     public static Karte karteziehen1(){
-        Random random = new Random() ;
-        int x = (int) (Math.random()*(312))+0;
-        //System.out.println(x);
+        int x = (int) (Math.random()*(312));
         Karte ausgeben = new Karte(deck.get(x).zahl , deck.get(x).zeichen,deck.get(x).wert);
         deck.remove(x);
         return ausgeben;

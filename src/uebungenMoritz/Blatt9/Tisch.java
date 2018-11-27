@@ -133,14 +133,14 @@ public class Tisch {
         }
     }
 
-        static int betrag() {
+        private static int betrag() {
             Scanner scanner = new Scanner(System.in);
             int betrag = scanner.nextInt();
             return betrag;
 
         }
 
-        static String jaodernein(){
+        private static String jaodernein(){
             Scanner scanner = new Scanner(System.in);
             String antwort = scanner.nextLine();
             if (antwort.equals("Ja")) {
@@ -150,7 +150,7 @@ public class Tisch {
             }
 
         }
-        static String name() {
+        private static String name() {
             Scanner scanner = new Scanner(System.in);
             String name = scanner.nextLine();
             return name;
