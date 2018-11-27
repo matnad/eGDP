@@ -34,7 +34,7 @@ public class Spieler {
         }
         if (kartenwert > 21) {
             for (int i = 0; i < anzahlkarten; i++) {
-                if (karte.get(i).zahl == "A") {
+                if (karte.get(i).zahl.equals("A")) {
                     karte.get(i).wert = 1;
                 }
             }

@@ -1,6 +1,6 @@
 package uebungenMoritz.Blatt9;
 import java.util.ArrayList;
-import java.util.Random;
+
 
 public class Deck {
     public static ArrayList<Karte> deck = new ArrayList<>();
@@ -32,7 +32,7 @@ public class Deck {
                             int wert = 0;
                             switch (j) {
                                 case 1:
-                                    zahl = "A";wert = 10;break;
+                                    zahl = "A";wert = 11;break;
                                 case 11:
                                     zahl = "J";wert = 10;break;
                                 case 12:
