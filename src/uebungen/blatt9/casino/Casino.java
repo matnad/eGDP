@@ -178,7 +178,10 @@ class Casino {
             dealCard(dealer);
             dealCard(gambler);
 
-            sendCardOrStop(gambler);
+            if (gambler.isBlackjack())
+                yeahBlackJack(gambler);
+            else
+                sendCardOrStop(gambler);
         }
     }
 
