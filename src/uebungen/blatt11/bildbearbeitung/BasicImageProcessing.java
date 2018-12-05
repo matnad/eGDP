@@ -50,6 +50,9 @@ public class BasicImageProcessing {
                 case "apply":
                     applyFilter();
                     break;
+                case "q": case "Q": case "quit": case "exit":
+                    System.exit(0);
+                    break;
                 default:
                     System.out.println("Invalid command.");
                     printCommandMsg();

@@ -54,8 +54,8 @@ public class FaltungsKern {
         for (int i = 0; i < w; i++) {
             for (int j = 0; j < h; j++) {
                 float summe[] = {gain, gain, gain};
-                for (int k = -kernHalfW; k <= kernHalfW; k++) {
-                    for (int l = -kernHalfH; l <= kernHalfH; l++) {
+                for (int l = -kernHalfW; l <= kernHalfW; l++) {
+                    for (int k = -kernHalfH; k <= kernHalfH; k++) {
                         int x = i + k;
                         if (x < 0)
                             x = 0;
@@ -123,6 +123,8 @@ public class FaltungsKern {
                             kern[i][j] = zahl * norm;
                         }
                     }
+                } else if (lineSplit[0].equals("data")) {
+                    System.out.println("Kern Datei konnte nicht vollständig gelesen werden. Falsches Format für data parameter.");
                 }
             }
         } catch (IOException | NullPointerException e1) {
