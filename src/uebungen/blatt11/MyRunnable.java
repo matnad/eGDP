@@ -23,4 +23,8 @@ public class MyRunnable implements Runnable {
     public static int getSum() {
         return sum;
     }
+
+    public static int getSum2() {
+        return sum;
+    }
 }
